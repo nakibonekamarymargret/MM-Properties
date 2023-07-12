@@ -1,0 +1,41 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+  }
+  
+  .sidebar {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  .sidebar h3 {
+    margin-top: 0;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 5px;
+  }
+  
+  .main-content {
+    background-color: #fff;
+    padding: 10px;
+  }
+  
+  .property-details h3 {
+    margin-top: 0;
+  }
+  
+  .property-details p {
+    margin: 5px 0;
+  }
+  

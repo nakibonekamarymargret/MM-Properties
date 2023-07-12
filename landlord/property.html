@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!--  authetication start-->
+    <script type = "text/javascript" >
+     function preback() {window.history.forward();}
+     setTimeout("preback()", 0);
+     window.onunload = function(){null;};
+ </script>
+ <!--  authetication end-->
+
+ <meta charset="utf-8">
+ <title>Property dashboard</title>
+
+ <link rel="stylesheet" href="css/dash.css"/>
+ <link rel="stylesheet" href="css/index.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+ <link rel="stylesheet" type="text/css" href="https:////cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+ <style type="text/css">
+    .hide{
+        top: 0;
+        transform: translate(-50%,-50%) scale(0.1);
+        visibility: hidden;
+    }
+    h1, h2{
+        font-size: 2rem;
+        color: yellowgreen;
+        margin-bottom: 1.2rem;
+    }
+    form input{
+        width: 92%;
+        outline: none;
+        border: 1px solid #fff;
+        padding: 12px 20px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: #e4e4e4;
+
+    }
+    .but{
+        font-size: 1rem;
+        margin-top: 1.8rem;
+        padding: 10px 0;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        width: 90%;
+        color: #fff;
+        cursor: pointer;
+        background: #707920;
+    }
+    .but:hover{
+        background: ;
+    }
+    input:focus{
+        border: 1px solid rgb(192, 192, 192);
+    }
+    .terms{
+        margin-top: 0.2rem;
+
+    }
+    .terms input{
+        height: 1em;
+        width: 1em;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .terms label{
+        font-size: 0.7rem;
+    }
+</style>
+</head>
+<body>
+
+    <!--wrapper start-->
+    <div class="wrapper">
+
+        <!--header menu start-->
+        <div class="header">
+            <div class="header-menu">
+                    <div class="title"><img src="./images/MM (1).png" alt="" style="height: 60px; width: 100px; border-radius: 10px;"></div><span></span>
+                    
+                    <div class="search">
+                        <input type="text" placeholder="search here..">
+                        <button type="submit"> <img src="images/search.jpg" alt=""></button>
+                    </div>
+                </div>
+            <div class="sidebar-btn">
+                <!-- <i class="fas fa-bars"></i> -->
+            </div>
+            <ul>
+
+                <!-- <li><a href="#"><i class="fas fa-power-off"></i></a></li> -->
+            </ul>
+
+        </div>
+
+        <!--header menu end-->
+
+        <!--sidebar start-->
+            <div class="sidebar">
+              <div class="sidebar-menu">
+                  <center class="profile">
+                      <!-- <img src="1.jpg" alt=""> -->
+                      <!-- <p>Admin</p> -->
+                  </center>
+                  <li class="item">
+                      <a href="dashboard.html" class="menu-btn">
+                          <i class="fas fa-tachometer" style='font-size:24px'></i><span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="item" id="users">
+                    <a href="property.html" class="menu-btn" >
+                        <i class="fa fa-users" style='font-size:24px'></i><span>Create property</span>
+                    </a>
+                    
+            </li>
+                  
+
+            <li class="item" id="users">
+                <a href="#sight" class="menu-btn" >
+                    <i class="fa fa-users" style='font-size:24px'></i><span>Tenants</span>
+                </a>
+
+                <div class="sub-menu"> 
+
+                    <a href="#"><i class="fa-solid fa-user-plus" style='font-size:24px'></i><span>Signed in tenants</span></a>
+                    <a href="#"><i class="fa-solid fa-user-plus" style='font-size:24px'></i><span>Registered tenants</span></a>
+                  
+  
+                </div>
+                
+        </li>
+            <li class="item" id="report">
+              <a href="#report" class="menu-btn" >
+                <i class="fa-solid fa-comment" style="font-size: 24;"></i><span>Reports<i class="fas fa-chevron-down drop-down"></i></span>
+              </a>
+              <div class="sub-menu"> 
+
+                  <a href="assigned.html"><i class="fa fa-television" style='font-size:24px'></i><span>Assigned property</span></a>
+                  <a href="available.html"><i class="fa-solid fa-user-plus" style='font-size:24px'></i><span>Vacant property</span></a>
+                
+
+              </div>
+          </li>
+            
+              
+              <li class="item" id="property">
+                  <a href="#property" class="menu-btn" >
+                      <i class="fas fa-bar-chart" style='font-size:24px'></i><span>Property<i class="fas fa-chevron-down drop-down"></i></span>
+                  </a>
+                  <div class="sub-menu"> 
+      
+                      <a href="property.html"><i class="fa-solid fa-cart-plus"></i><span>Add new property</span></a>
+                      <a href="property_details.html"><i class="fa-solid fa-sack-dollar"></i><span>Delete property</span></a>
+                      <a href="property_details.html"><i class="fa-solid fa-hands-holding-child"></i>Edit property<span></span></a>
+                      
+                  </div>
+          </li>
+          <li class="item" id="settings">
+              <a href="settings.html" class="menu-btn" >
+                  <i class="fas fa-wrench "style='font-size:24px'></i><span>Settings</span>
+              </a>
+              <div class="sub-menu"> 
+  
+                  <a href="#"><i class="fa-solid fa-cart-plus"></i><span>#</span></a>
+                  <a href="#"><i class="fa-solid fa-sack-dollar"></i><span>#</span></a>
+                  <a href="#"><i class="fa-solid fa-hands-holding-child"></i>#<span></span></a>
+                  
+              </div>
+      </li>
+      <li class="item" id="help">
+          <a href="help.html" class="menu-btn" >
+              <i class="    fas fa-hand-holding-medical" style='font-size:24px'></i><span>Help</span>
+          </a>
+          <div class="sub-menu"> 
+
+              <a href="#"><i class="fa-solid fa-cart-plus"></i><span>#</span></a>
+              <a href="#"><i class="fa-solid fa-sack-dollar"></i><span>#</span></a>
+              <a href="#"><i class="fa-solid fa-hands-holding-child"></i>#<span></span></a>
+              
+          </div>
+  </li>
+              </div>
+          </div>
+      
+         </div>
+
+         <div class="container">
+            <h2>Property</h2>
+            
+            <form>
+              <div>
+                <label for="property-name" style="color: yellowgreen;">PropertyName</label>
+                <input type="text" id="property-name" name="property-name" required>
+              </div>
+              <div>
+                <label for="property-type" style="color: yellowgreen;">Type</label>
+                <input type="text" id="property-type" name="property-type" required>
+              </div>
+              <div>
+                <label for="property-location" style="color: yellowgreen;">Location</label>
+                <input type="text" id="property-location" name="property-location" required>
+              </div>
+              <div>
+                <label for="property-description" style="color: yellowgreen;">Description</label>
+                <textarea id="property-description" name="property-description" required></textarea>
+              </div>
+              <div>
+                <label for="property-bedrooms" style="color: yellowgreen;">Bedrooms</label>
+                <input type="number" id="property-bedrooms" name="property-bedrooms" required>
+              </div>
+              <div>
+                <label for="property-bathrooms" style="color: yellowgreen;">Bathrooms</label>
+                <input type="number" id="property-bathrooms" name="property-bathrooms" required>
+              </div>
+              <div>
+                <label for="property-cost" style="color: yellowgreen;">Cost</label>
+                <input type="text" id="property-cost" name="property-cost" required>
+              </div>
+              <div>
+                <label for="property-images" style="color: yellowgreen;">Images</label>
+                <input type="file" id="property-images" name="property-images" multiple required>
+              </div>
+
+              <div id="propertyPreview"></div>
+              <a href="property_details.html"><button type="submit">Submit Property</button></a>
+            </form>
+            
+          </div>
+         
+
+
+  </div>
+</div>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Retrieve form field values
+  const PropertyName = document.querySelector('#property-name').value;
+  const Type = document.querySelector('#property-type').value;
+  const Location = document.querySelector('#property-location').value;
+  const Description = document.querySelector('#property-description').value;
+  const Bedrooms = document.querySelector('#property-bedrooms').value;
+  const Bathrooms = document.querySelector('#property-bathrooms').value;
+  const Cost = document.querySelector('#property-cost').value;
+  
+  const propertyPreview = `
+    <h2>Property Preview</h2>
+    <p>PropertyName: ${propertyName}</p>
+    <p>Type: ${Type}</p>
+    <p>Location: ${Location}</p>
+    <p>Description: ${Description}</p>
+    <p>Bedrooms: ${Bedrooms}</p>
+    <p>Bathrooms: ${Bathrooms}</p>
+    <p>Cost: ${Cost}</p>
+    <button id="acceptButton">Accept Property</button>
+  `;
+
+  const propertyPreviewContainer = document.querySelector('#propertyPreview');
+  propertyPreviewContainer.innerHTML = propertyPreview;
+
+  const acceptButton = document.querySelector('#acceptButton');
+  acceptButton.addEventListener('click', function() {
+    
+    window.location.href = 'property_details.html';
+    
+  });
+});
+
+</script>
+
+<SCript>
+    <!-- Add the following code inside the <script> tag in your HTML file -->
+
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Retrieve form field values
+  const PropertyName = document.querySelector('#property-name').value;
+  const Type = document.querySelector('#property-type').value;
+  const Location = document.querySelector('#property-location').value;
+  const Description = document.querySelector('#property-description').value;
+  const Bedrooms = document.querySelector('#property-bedrooms').value;
+  const Bathrooms = document.querySelector('#property-bathrooms').value;
+  const Cost = document.querySelector('#property-cost').value;
+
+  // Create the property preview dynamically
+  const propertyPreview = `
+    <h2>Property Preview</h2>
+    <p>PropertyName: ${propertyName}</p>
+    <p>Type: ${Type}</p>
+    <p>Location: ${Location}</p>
+    <p>Description: ${Description}</p>
+    <p>Bedrooms: ${Bedrooms}</p>
+    <p>Bathrooms: ${Bathrooms}</p>
+    <p>Cost: ${Cost}</p>
+    <button id="acceptButton">Accept Property</button>
+  `;
+
+  // Display the property preview
+  const propertyPreviewContainer = document.querySelector('#propertyPreview');
+  propertyPreviewContainer.innerHTML = propertyPreview;
+
+  // Add event listener to the accept button
+  const acceptButton = document.querySelector('#acceptButton');
+  acceptButton.addEventListener('click', function() {
+    window.location.href = 'property_details.html';
+    alert('Property accepted!');
+   
+
+    // Save the accepted property details in the database
+    saveAcceptedProperty(propertyName, propertyType); 
+    propertyPreviewContainer.innerHTML = ''; 
+  });
+});
+
+function saveAcceptedProperty(name, type) {
+  
+  fetch('/save_accepted_property', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      PropertyName: PropertyName,
+      Type: Type,
+      Location: Location,
+      Description: Description,
+      Bedrooms: Bedrooms,
+      Bathrooms: Bathrooms,
+      Cost: Cost
+    
+    }),
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Property saved:', data);
+    })
+    .catch(error => {
+      console.error('Error saving property:', error);
+    });
+}
+
+</SCript>
+</body>
+</html>

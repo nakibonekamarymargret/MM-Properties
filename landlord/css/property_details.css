@@ -1,0 +1,10 @@
+*{
+    background-color: azure;
+}
+
+.main-container{
+    flex-direction: row;
+    justify-content: space-between;
+    height: max-content;
+    width: 300px;
+}

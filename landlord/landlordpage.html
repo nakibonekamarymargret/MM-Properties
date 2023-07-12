@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!--  authetication start-->
+    <script type = "text/javascript" >
+     function preback() {window.history.forward();}
+     setTimeout("preback()", 0);
+     window.onunload = function(){null;};
+ </script>
+ <!--  authetication end-->
+
+ <meta charset="utf-8">
+ <title>Administratordashboard</title>
+
+ <link rel="stylesheet" href="css/dash.css"/>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+ <link rel="stylesheet" type="text/css" href="https:////cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+ <style type="text/css">
+    body{
+        background-image: url('uploads/apartment.jpg');
+    }
+    .hide{
+        top: 0;
+        transform: translate(-50%,-50%) scale(0.1);
+        visibility: hidden;
+    }
+    h1{
+        font-size: 2rem;
+        color: greenyellow;
+        margin-bottom: 1.2rem;
+    }
+    form input{
+        width: 92%;
+        outline: none;
+        border: 1px solid #ffffff;
+        padding: 12px 20px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: #e4e4e4;
+
+    }
+    .but{
+        font-size: 1rem;
+        margin-top: 1.8rem;
+        padding: 10px 0;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        width: 90%;
+        color: #fff;
+        cursor: pointer;
+        background: greenyellow;
+    }
+    .but:hover{
+        background: greenyellow;
+
+    }
+    input:focus{
+        border: 1px solid greenyellow;
+    }
+    .terms{
+        margin-top: 0.2rem;
+
+    }
+    .terms input{
+        height: 1em;
+        width: 1em;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .terms label{
+        font-size: 0.7rem;
+    }
+</style>
+</head>
+<body>
+
+    <!--wrapper start-->
+    <div class="wrapper">
+
+        <!--header menu start-->
+        <div class="header">
+            <div class="header-menu">
+                    <div class="title"> <img src="./images/MM (1).png" alt="" style="height: 60px; width: 100; border-radius: 10px;"></div><span></span>
+                    
+                    <div class="search">
+                        <input type="text" placeholder="search here..">
+                        <button type="submit"><img src="./images/search.jpg" alt=""></button>
+                    </div>
+                </div>
+            <div class="sidebar-btn">
+                <!-- <i class="fas fa-bars"></i> -->
+            </div>
+            <ul>
+
+                <!-- <li><a href="#"><i class="fas fa-power-off"></i></a></li> -->
+            </ul>
+
+        </div>
+
+        <!--header menu end-->
+
+        <!--sidebar start-->
+            <div class="sidebar">
+              <div class="sidebar-menu">
+                  <center class="profile">
+                      <!-- <img src="1.jpg" alt=""> -->
+                      <!-- <p>Admin</p> -->
+                  </center>
+                  <li class="item">
+                      <a href="dashboard.html" class="menu-btn">
+                          <i class="fas fa-tachometer" style='font-size:24px'></i><span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="item" id="users">
+                    <a href="property.html" class="menu-btn" >
+                        <i class="fa fa-users" style='font-size:24px'></i><span>Create property</span>
+                    </a>
+                    
+            </li>
+                  
+
+            <li class="item" id="users">
+                <a href="#sight" class="menu-btn" >
+                    <i class="fa fa-users" style='font-size:24px'></i><span>Tenants</span>
+                </a>
+
+                <div class="sub-menu"> 
+
+                    <a href="#"><i class="fa-solid fa-user-plus" style='font-size:24px'></i><span>Signed in tenants</span></a>
+                    <a href="#"><i class="fa-solid fa-user-plus" style='font-size:24px'></i><span>Registered tenants</span></a>
+                  
+  
+                </div>
+                
+        </li>
+            <li class="item" id="report">
+              <a href="#report" class="menu-btn" >
+                <i class="fa-solid fa-comment" style="font-size: 24;"></i><span>Reports<i class="fas fa-chevron-down drop-down"></i></span>
+              </a>
+              <div class="sub-menu"> 
+
+                  <a href="assigned.html"><i class="fa fa-television" style='font-size:24px'></i><span>Assigned property</span></a>
+                  <a href="available.html"><i class="fa-solid fa-user-plus" style='font-size:24px'></i><span>Vacant property</span></a>
+                
+
+              </div>
+          </li>
+            
+              
+              <li class="item" id="property">
+                  <a href="#property" class="menu-btn" >
+                      <i class="fas fa-bar-chart" style='font-size:24px'></i><span>Property<i class="fas fa-chevron-down drop-down"></i></span>
+                  </a>
+                  <div class="sub-menu"> 
+      
+                      <a href="property.html"><i class="fa-solid fa-cart-plus"></i><span>Add new property</span></a>
+                      <a href="property_details.html"><i class="fa-solid fa-sack-dollar"></i><span>Delete property</span></a>
+                      <a href="property_details.html"><i class="fa-solid fa-hands-holding-child"></i>Edit property<span></span></a>
+                      
+                  </div>
+          </li>
+          <li class="item" id="settings">
+              <a href="settings.html" class="menu-btn" >
+                  <i class="fas fa-wrench "style='font-size:24px'></i><span>Settings</span>
+              </a>
+              <div class="sub-menu"> 
+  
+                  <a href="#"><i class="fa-solid fa-cart-plus"></i><span>#</span></a>
+                  <a href="#"><i class="fa-solid fa-sack-dollar"></i><span>#</span></a>
+                  <a href="#"><i class="fa-solid fa-hands-holding-child"></i>#<span></span></a>
+                  
+              </div>
+      </li>
+      <li class="item" id="help">
+          <a href="help.html" class="menu-btn" >
+              <i class="    fas fa-hand-holding-medical" style='font-size:24px'></i><span>Help</span>
+          </a>
+          <div class="sub-menu"> 
+
+              <a href="#"><i class="fa-solid fa-cart-plus"></i><span>#</span></a>
+              <a href="#"><i class="fa-solid fa-sack-dollar"></i><span>#</span></a>
+              <a href="#"><i class="fa-solid fa-hands-holding-child"></i>#<span></span></a>
+              
+          </div>
+  </li>
+              </div>
+          </div>
+<!--            end of sidebar-->
+      <div class="main-container">
+        <main>
+            <h1>Landlord Dashboard</h1>
+            <div class="date">
+             <input type="date">
+         </div>
+         <div class="sight">
+
+
+            
+            <div class="person">
+                <span><i class="fa-solid fa-person"></i></span>
+                <div class="mid">
+                 <div class="left">
+                     <h3>SIGNED IN TENANTS </h3>
+                     <h1>
+                       12
+                   </h1>
+               </div>
+               <div class="gress">
+
+                  <div class="num">
+                     <p></p>
+                 </div>
+             </div>
+         </div>
+         
+     </div>
+     
+
+
+     
+     <div class="persons">
+        <span><i class="fa-solid fa-person"></i></span>
+        <div class="mid">
+         <div class="left">
+             <h3>REGISTERED TENANTS</h3>
+             <h1>
+               12
+           </h1>
+       </div>
+       <div class="gress">
+
+          <div class="num">
+             <p></p>
+         </div>
+     </div>
+ </div>
+
+</div>
+
+
+<div class="tenants">
+    <span><i class="fa-solid fa-house"></i></span>
+    <div class="mid">
+     <div class="left">
+         <h3>MY TENANTS</h3>
+         <h1>
+            12
+        </h1>
+    </div>
+    <div class="gress">
+
+      <div class="num">
+         <p></p>
+     </div>
+ </div>
+</div>
+</div>
+</div>
+              <div class="order" style=" background-color:#707920; padding:5px; border-radius:20px">
+                <h2>My property</h2>
+                <table id="myTable">
+                    <thead>
+
+                        <tr>
+                            <th>PropertyName</th>
+                            <th>Type</th>
+                            <th>Location</th>
+                            <th>Cost</th>
+                            <th>View</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td><div class="center">
+                              <a href="property_details.html"><button >View Property</button></a>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td><div class="center">
+                                <button >View Property</button>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td><div class="center">
+                                <button >View Property</button>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td><div class="center">
+                                <button >View Property</button>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td><div class="center">
+                                <button >View Property</button>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td><div class="center">
+                                <button >View Property</button>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td><div class="center">
+                                <button >View Property</button>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td><div class="center">
+                                <button >View Property</button>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td><div class="center">
+                                <button >View Property</button>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td><div class="center">
+                                <button >View Property</button>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td>get values in database</td>
+                            <td><div class="center">
+                                <button >View Property</button>
+                            </div></td>
+                        </tr>
+                    </tbody> 
+                </table>
+                
+
+          </div>
+      </main>
+  </div>
+</div>
+<script>
+                    //adding on click event to div which pops up. when you click it, it disaapears
+    document.getElementById('popup').addEventListener('click',function(){
+        this.classList.add('hide');
+    })
+
+                   //getting all buttons on this page
+    btns=document.querySelectorAll('button');
+
+                    //putting onclick fnction on all buttoins except the one with search icon
+    for (var i = btns.length - 1; i >= 1; i--) {
+        btns[i].addEventListener('click',function(){
+            document.getElementById('popup').classList.remove('hide')
+        })
+    }
+</script>
+
+<script type="text/javascript" src="https:////cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
+
+
+
+</body>
+</html>
