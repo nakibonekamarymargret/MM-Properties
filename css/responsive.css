@@ -154,17 +154,17 @@
         top: 0;
         background-color: #1f1f1f !important;
     }
-    body.realestate_version .message-box,
-    body.realestate_version .service-widget {
+    body.mm .message-box,
+    body.mm .service-widget {
         margin: 30px 0;
     }
-    body.realestate_version .property-detail .col-md-2 {
+    body.mm .property-detail .col-md-2 {
         margin: 15px 0;
     }
-    body.realestate_version .first-section {
+    body.mm .first-section {
         
     }
-    body.realestate_version .header_style_01 {
+    body.mm .header_style_01 {
         background-color: #ffffff;
     }
     .footer .col-xs-12 {
@@ -370,7 +370,7 @@
 	.all-title-box h2{
 		margin-bottom: 20px;
 	}
-	body.realestate_version .first-section{}
+	body.mm .first-section{}
 	.navbar-nav{
 		margin: 0px;
 	}
@@ -466,7 +466,7 @@
 	.navbar-nav{
 		margin: 0px;
 	}
-	body.realestate_version .header_style_01 .navbar-right > li.search-option form.dropdown-menu{
+	body.mm .header_style_01 .navbar-right > li.search-option form.dropdown-menu{
 		width: 228px;
 	}
 	.fixed-menu .navbar-default{

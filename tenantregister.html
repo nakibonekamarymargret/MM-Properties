@@ -34,17 +34,14 @@
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+   
         <style>
         .hidden-content {
             display: none;
         }
     </style>
 </head>
-<body class="realestate_version">
+<body class="mm">
 
     <!-- LOADER -->
     <div id="preloader">
@@ -106,35 +103,39 @@
                         </ul>
 
                         <div class="parallax first-section">
+                            
         <div class="container">
             <div class="row">
                 <div class="col-md-6 wow slideInLeft hidden-xs hidden-sm">
                     <div class="contact_form">
                         <h3><i class="fa fa-envelope-o grd1 global-radius"></i> Hello Tenant</h3>
-                        <p>Please fill this form to get you covered</p>
-                       <form id="contactform1" class="row" name="contactform" method="post">
+                        <p>Please register on MM to see what we have for you</p>
+                        <form  action="tenantlogin.html" name="contactform" method="post">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="first_name1" id="first_name1" class="form-control" placeholder="First Name" required>
+                                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name"required>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="last_name1" id="last_name1" class="form-control" placeholder="Last Name" required>
+                                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name"required>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="email" name="email1" id="email1" class="form-control" placeholder="Your Email"required>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="phone1" id="phone1" class="form-control" placeholder="Your Phone"required>
-                                </div>
-                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="password" name="pass" id="pass" class="form-control" placeholder="Your Password" required>
+                                    <input type="tel" name="phone" id="phone" class="form-control" placeholder="Your Phone" required>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="password" name="cpass" id="cpass" class="form-control" placeholder="Confirm Password" required>
+                                    <input type="password" name="password" id="password" class="form-control" placeholder=" Your Password"required>
                                 </div>
-                                <div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                                    <a href="tenantlogin.html"><input type="button" value="Register"></a>
+                               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Confirm Password"required>
+                                </div>
+                    
+                             
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                    
+                                    <input type="submit" value="Register" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">
+                                    </div>
                                 </div>
                                 </div>
                             </fieldset>

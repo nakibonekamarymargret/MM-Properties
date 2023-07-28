@@ -439,7 +439,7 @@ a img.aligncenter {
 	color: #ffffff;
 }
 
-body.realestate_version .social-links:hover a{
+body.mm .social-links:hover a{
 	background-color: transparent !important;
 	color: #333333 !important;
 }
@@ -550,10 +550,10 @@ li.social-links a {
 }
 
 
-body.realestate_version .header_style_01 .navbar-right > li.search-option{
+body.mm .header_style_01 .navbar-right > li.search-option{
 	position: relative;
 }
-body.realestate_version .header_style_01 .navbar-right > li.search-option button.search{
+body.mm .header_style_01 .navbar-right > li.search-option button.search{
 	line-height: 43px;
 	width: 45px;
 	color: #fff;
@@ -562,10 +562,10 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option button
 	transition: all .3s ease-in-out;
 	border-radius: 2px;
 }
-body.realestate_version .header_style_01 .navbar-right > li.search-option button.search:hover{
+body.mm .header_style_01 .navbar-right > li.search-option button.search:hover{
 	background: #076799;
 }
-body.realestate_version .header_style_01 .navbar-right > li.search-option form.dropdown-menu{
+body.mm .header_style_01 .navbar-right > li.search-option form.dropdown-menu{
 	position: absolute;
 	height: 50px;
 	width: 280px;
@@ -582,7 +582,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form.d
 	box-shadow: 0 0px 5px 2px rgba(0,0,0,.175);
 }
 
-body.realestate_version .header_style_01 .navbar-right > li.search-option form input{
+body.mm .header_style_01 .navbar-right > li.search-option form input{
 	width: 100%;
 	height: 100%;
 	background: transparent;
@@ -590,7 +590,7 @@ body.realestate_version .header_style_01 .navbar-right > li.search-option form i
 	padding: 0 49px 0 10px;
 }
 
-body.realestate_version .header_style_01 .navbar-right > li.search-option form button{
+body.mm .header_style_01 .navbar-right > li.search-option form button{
 	display: block;
 	width: 48px;
 	color: #fff;
