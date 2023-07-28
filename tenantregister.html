@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
  
      <!-- Site Metas -->
-    <title>Tenant </title>  
+    <title>Landlord Register</title>  
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -34,7 +34,10 @@
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
 
-   
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
         <style>
         .hidden-content {
             display: none;
@@ -103,39 +106,36 @@
                         </ul>
 
                         <div class="parallax first-section">
-                            
         <div class="container">
             <div class="row">
                 <div class="col-md-6 wow slideInLeft hidden-xs hidden-sm">
                     <div class="contact_form">
-                        <h3><i class="fa fa-envelope-o grd1 global-radius"></i> Hello Tenant</h3>
-                        <p>Please register on MM to see what we have for you</p>
-                        <form  action="tenantlogin.html" name="contactform" method="post">
+                        <h3><i class="fa fa-envelope-o grd1 global-radius"></i> Hello Landlord</h3>
+			    <p>Please fill thes fields to get all the services we offer for the landlord</p>
+                        <form id="contactform1" class="row" name="lanlordregister" action="landlordlogin.html">
                             <fieldset class="row-fluid">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name"required>
+                                    <input type="text" name="first_name1" id="first_name1" class="form-control" placeholder="First Name" required>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name"required>
+                                    <input type="text" name="last_name1" id="last_name1" class="form-control" placeholder="Last Name" required>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
+                                    <input type="email" name="email1" id="email1" class="form-control" placeholder="Your Email"required>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="tel" name="phone" id="phone" class="form-control" placeholder="Your Phone" required>
+                                    <input type="tel" name="phone1" id="phone1" class="form-control" placeholder="Your Phone"required>
+                                </div>
+                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="password" name="pass" id="pass" class="form-control" placeholder="Your Password" required>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="password" name="password" id="password" class="form-control" placeholder=" Your Password"required>
+                                    <input type="password" name="cpass" id="cpass" class="form-control" placeholder="Confirm Password" required>
                                 </div>
-                               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <input type="password" name="password" id="password" class="form-control" placeholder="Confirm Password"required>
-                                </div>
-                    
-                             
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                                    
-                                    <input type="submit" value="Register" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">
-                                    </div>
+                                <div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                    <input type="submit" value="register" id="submit1" class="btn btn-light btn-radius btn-brd grd1 btn-block">
+					   
                                 </div>
                                 </div>
                             </fieldset>
@@ -144,8 +144,8 @@
                 </div>
 				<div class="col-md-6 col-sm-12">
                     <div class="big-tagline clearfix">
-                        <h2>Find Your Property with MMM Property Management </h2>
-                        <p class="lead">With MM, you can Find your favorite  property Without any hassle. </p>
+                        <h2>Sell Your Property with MM Property Management</h2>
+                        <p class="lead">With MM we offer best Landlord services trust us you won't regret </p>
                     </div>
                 </div>
             </div><!-- end row -->
@@ -176,13 +176,17 @@
                             <h3>Info Link</h3>
                         </div>
 
-                        <ul class="twitter-widget footer-links">
-                            <li><a href="#"> Home </a></li>
-                            <li><a href="#"> About Us </a></li>
-                            <li><a href="#"> Services</a></li>
-							<li><a href="#"> Properties</a></li>
-							<li><a href="#"> Contact</a></li>
-                        </ul><!-- end links -->
+			    <ul class="twitter-widget footer-links">
+                            <li><a href="index.html"> Home </a></li>
+                            <li><a href="about.html"> About Us </a></li>
+                            <li><a href="service.html"> Services</a></li>
+							<li><a href="gallery.html"> Gallery</a></li>
+							<li><a href="properties.html"> Properties</a></li>
+							<li><a href="contact"> Contact</a></li>
+                            <li><a href="tenant.html">Tenant</a></li>
+                            <li><a href="landlord.html">Landlord</a></li>
+                        </ul>
+			    <!-- end links -->
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
 				
@@ -208,8 +212,8 @@
                         </div>
                         <ul class="footer-links">
                             <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+				<li><a href="https://704kc.github.io/MM-Properties/"><i class="fa fa-github"></i> Github</a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-                           <span><i class="fa fa-linkedin-square "></i> <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQGZuLP9ipiUlQAAAYkH9OQIw0cA0HMgbuSBkcTbO3OTEGN8CC3o-qqEW1DfTNsHB-TXSag9AEv3lH2XA1nYF70Nv6Ga_yhYv66orIYHIwBYRyS4h0vyUxZTadnNgCBMvbQ8acE=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2F%2520nakiboneka-mary-margret-9826a%2520a225">Linkedin</a></span>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
